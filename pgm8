@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h> // For abs() function
+
+int main() {
+    int num, last_digit;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    last_digit = abs(num % 10);
+
+    printf("The last digit of %d is: %d\n", num, last_digit);
+
+    return 0;
+}
