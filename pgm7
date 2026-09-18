@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int num, temp, sum = 0, digit;
+    printf("Enter a 3-digit integer: ");
+    scanf("%d", &num);
+
+    temp = num;
+    digit = temp % 10;
+    sum += digit;
+    temp /= 10; 
+    digit = temp % 10;
+    sum += digit;
+    temp /= 10;
+    digit = temp % 10;
+    sum += digit;
+
+    printf("Sum of digits of %d = %d\n", num, sum);
+
+    return 0;
+}
