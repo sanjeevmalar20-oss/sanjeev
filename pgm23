@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int num, i;
+    bool isPrime = true;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    if (num <= 1) {
+        isPrime = false;
+    } else {
+        // Check for factors from 2 up to num / 2 (or i * i <= num)
+        for (i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break; // Factor found, stop checking
+            }
+        }
+    }
+
+    if (isPrime) {
+        printf("%d is a Prime number.\n", num);
+    } else {
+        printf("%d is NOT a Prime number.\n", num);
+    }
+
+    return 0;
+}
