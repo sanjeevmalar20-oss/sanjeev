@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int num, reversedNum = 0, remainder, originalNum;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    originalNum = num; // Save original number for display
+
+  
+    while (num != 0) {
+        remainder = num % 10;                     // Extract last digit
+        reversedNum = reversedNum * 10 + remainder; // Shift left and append digit
+        num /= 10;                                // Remove last digit
+    }
+
+    printf("Reversed Number of %d = %d\n", originalNum, reversedNum);
+
+    return 0;
+}
